@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    color: #ffff;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 600;
+}
+a {
+    color: #ffff;
+}
