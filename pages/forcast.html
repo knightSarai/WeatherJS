@@ -6,12 +6,5 @@ Days: <a class="weather-link" href="#!/forcast/2">2</a> | <a class="weather-link
 <hr />
 <h1 ng-show="!weatherResult">No Match Found</h1>
 <div ng-repeat="weather in weatherResult.list">
-    <div class="card my-4">
-        <div class="card-header">
-            {{weather.dt_txt}}
-        </div>
-        <div class="card-body">
-            Daytime temperature {{convertToCelsius(weather.main.temp)}}
-        </div>
-    </div>
+    <weather-card weather-day="weather" convert-to-celsius="convertToCelsius(degK)"></weather-card>
 </div>

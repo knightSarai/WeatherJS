@@ -20,7 +20,18 @@ WeatherApp.config(function ($routeProvider) {
 WeatherApp.service('cityService', function () {
     this.city = "Amman";
 });
-
+// DIRECTIVES
+WeatherApp.directive('weatherCard', [() => {
+    return {
+        restrict: 'E',
+        templateUrl: 'directives/weatherCard.html',
+        replace: true,
+        scope: {
+            weatherDay: '=',
+            convertToCelsius: '&'
+        }
+    }
+}])
 //CONTROLLER
 WeatherApp.controller('homeController', ['$scope', 'cityService',
     function ($scope, cityService) {

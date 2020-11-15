@@ -1,0 +1,8 @@
+<div class="card my-4">
+    <div class="card-header">
+        {{weatherDay.dt_txt}}
+    </div>
+    <div class="card-body">
+        Daytime temperature {{convertToCelsius({degK: weatherDay.main.temp})}}
+    </div>
+</div>
