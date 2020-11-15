@@ -19,3 +19,7 @@ a {
 #home {
     margin-top: 2rem;
 }
+
+.weather-link{ 
+    color: aqua;
+}
