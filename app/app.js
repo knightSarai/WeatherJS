@@ -33,10 +33,12 @@ WeatherApp.directive('weatherCard', [() => {
     }
 }])
 //CONTROLLER
-WeatherApp.controller('homeController', ['$scope', 'cityService',
-    function ($scope, cityService) {
+WeatherApp.controller('homeController', ['$scope', '$location', 'cityService',
+    function ($scope, $location, cityService) {
         $scope.city = cityService.city;
-
+        $scope.submit = () => {
+            $location.path('/forcast')
+        }
         $scope.$watch('city', function () {
             cityService.city = $scope.city;
         })
@@ -50,8 +52,7 @@ WeatherApp.controller('forcastController', ['$scope', '$http', '$routeParams', '
         const days = $routeParams.days | 2;
         $http
             .get(`http://api.openweathermap.org/data/2.5/forecast?q=${$scope.city}&cnt=${days}&appid=${appid}`)
-            .then(res => $scope.weatherResult = res.data)
-            .then(() => console.log($scope.weatherResult));
+            .then(res => $scope.weatherResult = res.data);
         $scope.convertToCelsius = degK => Math.round(degK - 273.15)
         /**Watcher */
     }
