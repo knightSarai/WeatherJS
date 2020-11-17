@@ -1,8 +1,8 @@
 import template from './form.template.js';
 
 const FormComponent = {
-    binding: {
-
+    bindings: {
+        city: '<'
     },
     template
 }

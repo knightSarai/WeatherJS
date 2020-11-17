@@ -5,7 +5,7 @@ const WeatherComponent = {
     template,
     controller: class WeatherController {
         constructor() {
-
+            this.city = "Amman"
         }
     }
 }
