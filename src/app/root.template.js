@@ -1,5 +1,5 @@
 const template = `
-    <h1>knight temp</h1>
+    <div ui-view></div>
 `;
 
 export default template;
