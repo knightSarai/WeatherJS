@@ -12,6 +12,10 @@ const WeatherModule = angular
                 url: '',
                 component: 'weatherForm'
             })
+            .state('forcast', {
+                url: '/forcast',
+                template: '<h1>forcast</h1>'
+            })
     })
     .component('weatherForm', WeatherComponent)
     .component('header', Header)
